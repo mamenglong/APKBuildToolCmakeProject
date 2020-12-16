@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="internalOnly" android:sharedUserId="org.kustom.widget.shareduid" package="org.kustom.widget" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission android:name="org.kustom.widget.permission.ACCESS_DATA" android:protectionLevel="signature"/>
+    <uses-permission android:name="org.kustom.weather.permission.ACCESS_DATA"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.barometer" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.light" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.proximity" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.stepdetector" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-23 android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission-sdk-23 android:name="com.google.android.gm.permission.READ_CONTENT_PROVIDER"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="@xml/backup_rules" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="org.kustom.widget.WidgetApp" android:process="@string/process_editor" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:exported="false" android:label="App Intro" android:launchMode="singleInstance" android:name="org.kustom.lib.intro.WidgetKustomIntro" android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="org.kustom.APP_INTRO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/settings_general" android:launchMode="singleTop" android:name="org.kustom.lib.settings.WidgetSettingsActivity">
+            <intent-filter>
+                <action android:name="org.kustom.APP_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:exported="true" android:label="@string/app_name_short" android:launchMode="singleTop" android:name="org.kustom.widget.picker.WidgetPicker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/settings_editor_advanced" android:name="org.kustom.lib.editor.WidgetAdvancedEditorActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="org.kustom.PRESET_EDITOR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="KWGT Import" android:launchMode="singleInstance" android:name="org.kustom.lib.loader.ImportActivity" android:noHistory="true" android:theme="@style/Theme.Transparent">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.EDIT"/>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="application/x-zip"/>
+                <data android:mimeType="application/zip"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/x-zip-compressed"/>
+                <data android:host="*"/>
+                <data android:pathPattern="/.*\\.kwgt"/>
+                <data android:pathPattern="/.*\\.kwgt\\.zip"/>
+                <data android:pathPattern=".*\\.kwgt"/>
+                <data android:pathPattern=".*\\.kwgt\\.zip"/>
+                <data android:pathPattern="/.*\\.komp"/>
+                <data android:pathPattern="/.*\\.komp\\.zip"/>
+                <data android:pathPattern=".*\\.komp"/>
+                <data android:pathPattern=".*\\.komp\\.zip"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="org.kustom.widget.WidgetClickActivity" android:noHistory="true" android:process="@string/process_service" android:taskAffinity=".widget.click" android:theme="@style/Theme.Transparent"/>
+        <service android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:icon="@mipmap/ic_launcher" android:label="Kustom Widget Service" android:name="org.kustom.widget.WidgetService" android:process="@string/process_service"/>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name1x1" android:name="org.kustom.widget.providers.WidgetProvider1x1" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget1x1"/>
+        </receiver>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name2x2" android:name="org.kustom.widget.providers.WidgetProvider2x2" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget2x2"/>
+        </receiver>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name4x1" android:name="org.kustom.widget.providers.WidgetProvider4x1" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget4x1"/>
+        </receiver>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name4x2" android:name="org.kustom.widget.providers.WidgetProvider4x2" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget4x2"/>
+        </receiver>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name2x4" android:name="org.kustom.widget.providers.WidgetProvider2x4" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget2x4"/>
+        </receiver>
+        <receiver android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/widget_name4x4" android:name="org.kustom.widget.providers.WidgetProvider4x4" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_VERSION"/>
+                <action android:name="com.buzzpia.aqua.appwidget.GET_CONFIG_DATA"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget4x4"/>
+        </receiver>
+        <provider android:authorities="org.kustom.widget.content" android:exported="true" android:name="org.kustom.widget.WidgetInfoProvider" android:process="@string/process_service"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3485228456276219~3700523487"/>
+        <activity android:exported="true" android:label="@string/settings_editor_advanced" android:launchMode="singleTop" android:name="org.kustom.lib.editor.NotificationAdvancedEditorActivity" android:taskAffinity=".notify" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="org.kustom.NOTIFICATION_EDITOR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="Preset List" android:launchMode="singleTop" android:name="org.kustom.lib.loader.PresetListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/search"/>
+        </activity>
+        <activity android:exported="false" android:label="Export Preset" android:launchMode="singleTop" android:name="org.kustom.app.ExportActivity">
+            <intent-filter>
+                <action android:name="org.kustom.EXPORT_PRESET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/activity_shortcut" android:name="org.kustom.lib.editor.ShortcutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:theme="@style/Base.Theme.AppCompat"/>
+        <activity android:exported="true" android:label="@string/editor_activity_tasker_var" android:name="org.kustom.lib.editor.tasker.EditVarActivity" android:theme="@android:style/Theme.Holo.Light" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/editor_activity_tasker_preset" android:name="org.kustom.lib.editor.tasker.LoadPresetActivity" android:theme="@android:style/Theme.Holo.Light" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="org.kustom.lib.notify.NotifyClickActivity" android:noHistory="true" android:process="@string/process_service" android:taskAffinity=".notify.click" android:theme="@style/Theme.Transparent"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:enabled="true" android:label="Kustom Notifications" android:name="org.kustom.lib.music.NotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:label="Kustom Music and Status Bar Service" android:name="org.kustom.lib.services.SBNService" android:process="@string/process_service"/>
+        <service android:exported="false" android:label="Kustom Fitness Data Service" android:name="org.kustom.lib.services.FitnessService" android:process="@string/process_service"/>
+        <service android:exported="false" android:label="Kustom Core Monitoring Service" android:name="org.kustom.lib.services.CoreService" android:process="@string/process_service"/>
+        <provider android:authorities="org.kustom.widget.provider" android:exported="true" android:name="org.kustom.api.Provider" android:process="@string/process_service"/>
+        <provider android:authorities="org.kustom.widget.files" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider"/>
+        </provider>
+        <provider android:authorities="org.kustom.widget.stats" android:exported="true" android:label="Kustom Stats Provider" android:name="org.kustom.lib.provider.StatsProvider" android:permission="org.kustom.widget.permission.ACCESS_DATA" android:process="@string/process_service"/>
+        <provider android:authorities="org.kustom.widget.config" android:exported="true" android:label="Kustom Cache Provider" android:name="org.kustom.config.provider.LocalConfigProvider" android:permission="org.kustom.widget.permission.ACCESS_DATA" android:process="@string/process_service"/>
+        <receiver android:exported="true" android:label="Fire Var Label" android:name="org.kustom.lib.tasker.FireReceiver" android:process="@string/process_service">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:label="Kustom Click Handler" android:launchMode="singleInstance" android:name="org.kustom.lib.KProxyActivity" android:noHistory="true" android:process="@string/process_service" android:theme="@style/Theme.Transparent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="Kustom Shortcut Handler" android:launchMode="singleInstance" android:name="org.kustom.lib.KProxyShortcut" android:noHistory="true" android:process="@string/process_service" android:theme="@style/Theme.Transparent"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:exported="false" android:label="Support" android:launchMode="singleTask" android:name="org.kustom.app.SupportActivity" android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="org.kustom.APP_SUPPORT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+        <provider android:authorities="org.kustom.widget.unread" android:exported="true" android:label="Kustom Unread Provider" android:name="org.kustom.unread.lib.UnreadProvider"/>
+        <provider android:authorities="org.kustom.widget.leak-sentry-installer" android:exported="false" android:name="leakcanary.internal.LeakSentryInstaller"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact"/>
+        <receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.evernote.android.job.v14.RUN_JOB"/>
+                <action android:name="net.vrallev.android.job.v14.RUN_JOB"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="org.kustom.widget.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="org.kustom.widget.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="2.2.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

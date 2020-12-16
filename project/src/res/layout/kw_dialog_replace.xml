@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+    <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/search" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/action_search" android:maxLines="1" android:inputType="text" style="@style/AppTheme.Dialog.Form.Entry" />
+    <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/replace" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/action_replace" android:maxLines="1" android:inputType="text" style="@style/AppTheme.Dialog.Form.Entry" />
+    <CheckBox android:textAppearance="@style/AppTheme.Dialog.Form.Entry" android:id="@id/option_regexp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/option_replace_regex" />
+    <CheckBox android:textAppearance="@style/AppTheme.Dialog.Form.Entry" android:id="@id/option_case" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/option_replace_case" />
+</LinearLayout>

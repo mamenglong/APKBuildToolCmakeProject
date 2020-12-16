@@ -1,0 +1,17 @@
+.class public abstract Ld/f/a/b/a;
+.super Ljava/lang/Object;
+.source "AndroidSensor.java"
+
+# interfaces
+.implements Landroid/hardware/SensorEventListener;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

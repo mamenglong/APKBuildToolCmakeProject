@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AppTheme.Toolbar">
+        <TextView android:gravity="center" android:layout_gravity="end" android:id="@id/toolbar_export" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_export" style="@style/Widget.AppCompat.Button.Borderless" />
+        <ProgressBar android:gravity="center" android:layout_gravity="end" android:id="@id/toolbar_progress" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/export_form" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text.Medium" android:id="@id/edit_pro_warning" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dialog_gopro_text_export" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+            <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/edit_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/export_edit_title" android:singleLine="true" android:maxLength="30" android:inputType="text" style="@style/AppTheme.Dialog.Form.Text.Medium" />
+            <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/edit_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/export_edit_description" android:maxLines="4" android:minLines="1" android:maxLength="300" android:inputType="textMultiLine" style="@style/AppTheme.Dialog.Form.Text.Medium" />
+            <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header.Large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="8.0dip" android:text="@string/export_edit_author_section" />
+            <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/edit_author_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/export_edit_author_name" android:singleLine="true" android:inputType="text" style="@style/AppTheme.Dialog.Form.Text.Medium" />
+            <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/edit_author_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/export_edit_author_email" android:singleLine="true" android:inputType="textEmailAddress" style="@style/AppTheme.Dialog.Form.Text.Medium" />
+            <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header.Large" android:id="@id/komponent_options_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="8.0dip" android:text="@string/export_edit_komponent_section" />
+            <CheckBox android:id="@id/option_readonly" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/export_edit_readonly" style="@style/AppTheme.Dialog.Form.Text.Medium" />
+            <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header.Large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="8.0dip" android:text="@string/export_edit_output_section" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/export_edit_sd_directory" />
+                <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:id="@id/edit_directory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/export_edit_sd_filename" />
+                <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:id="@id/edit_filename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

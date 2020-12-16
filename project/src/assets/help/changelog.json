@@ -1,0 +1,967 @@
+{
+  "header": "\u003cstrong\u003ePLEASE RATE\u003c/strong\u003e the App if you like it! This is VERY important to keep new stuff coming! IMPORTANT: If you have issues or need a refund \u003cstrong\u003ePLEASE\u003c/strong\u003e send an email to help@kustom.rocks do not use Play Store reviews!",
+  "releases": [
+    {
+      "title": "v3.44",
+      "changes": [
+        "New opacity filter in overlap group",
+        "New color filter in overlap group (sepia, saturation, contrast and more)",
+        "New tc(type) function will tell you the text type (Katakana, Cyrillic...)",
+        "Function si(darkmode) now ignores wallpaper color in KLWP",
+        "Improved save and export speed",
+        "Increased max shadow blur to 200",
+        "Removed weather.com since has been deprecated :(",
+        "Fixed tc(cap) not properly adding caps on already capitalized strings",
+        "Importing old fave formulas regardless of previous release"
+      ]
+    },
+    {
+      "title": "v3.43",
+      "changes": [
+        "New app supports Android Dark mode when in default theme",
+        "New dark mode support on Android 8.1 or newer via si(darkmode)",
+        "New wallpaper primary and secondary color via si() on Android 8.1 or newer",
+        "New dual SIM support for most of cell formulas in nc()",
+        "New si(mcount) returns module count in current group or parents",
+        "New check if audio devices are connected and get names via nc()",
+        "Fixes formulas not copied when copying animations",
+        "Fixes blurred full screen images on big bitmaps"
+      ]
+    },
+    {
+      "title": "v3.42",
+      "changes": [
+        "New tc(lines) to cound lines in a text",
+        "Fixed touch action not workin in some case",
+        "Fixed permission wrongly asking to open the settings",
+        "Fixed back button going to the editors in formula examples",
+        "Fixed wf() returning empty instead of forecast when no hourly data available",
+        "Fixed content:// uris from Tasker"
+      ]
+    },
+    {
+      "title": "v3.41",
+      "changes": [
+        "Fixed pro key not been recognized in some case",
+        "Fixed crash using some RSS from ITunes"
+      ]
+    },
+    {
+      "title": "v3.40",
+      "changes": [
+        "Kustom minimum supported release is now Android 5.x ",
+        "Permissions Location and External storage are now optional",
+        "New LAC and CID info in ni()",
+        "Added support for 5 secs issue in Lawnchair v2 and Smart Launcher 5 on KLWP",
+        "Fixed wind speed in Yahoo weather",
+        "Fixed copy / paste not shown in the formula editor on some device",
+        "Fixed plus button not shown on first install",
+        "Fixed KLWP notification shade color not updated correctly on Oreo",
+        "Fixed KLWP not restoring preview screen on activity paused",
+        "Fixed KLWP action launcher colors"
+      ]
+    },
+    {
+      "title": "v3.39",
+      "changes": [
+        "New dew point and frost point in weather info",
+        "New Cloud cover and UV index on supported providers",
+        "Fix issues updating weather in some condition",
+        "Fix cant close changelog window on some language",
+        "Fix shadow distance cant be 0 in FX",
+        "Fix forced language not always in use on screen",
+        "Fix Turkish not in language list"
+      ]
+    },
+    {
+      "title": "v3.38",
+      "changes": [
+        "New air quality data via aq() function",
+        "Not showing notification on Android Nougat or lower",
+        "Added 19.5:9 aspect ratio",
+        "Fix Yahoo weather",
+        "Fix visibility landscape not working in KWGT, fixed si(landscape)",
+        "Fix touch not working on notifications",
+        "Fix notification editor showing visibility option in KLWP",
+        "Fix unread count for GMail not working without unread plugin",
+        "Fix random crash on some device loading preset",
+        "Fix opacity issue with global switches",
+        "Fix drop shadow in overlap group fx",
+        "Fix blur higher in editor than screen",
+        "Fix rotation offset not working on some shape or groups"
+      ]
+    },
+    {
+      "title": "v3.37",
+      "changes": [
+        "New Icon and Logo thanks to Max Patchs! \u003ca href\u003d\"https://kustom.rocks/icon/contest\"\u003eDetails\u003c/a\u003e",
+        "Kustom Notification is here! Check it out in the app settings (Android M or newer only!) \u003ca href\u003d\"https://kustom.rocks/notification\"\u003eDetails\u003c/a\u003e",
+        "Google denied SMS and CALLS support, unread counters are notification based. \u003ca href\u003d\"https://kustom.rocks/unread\"\u003eDetails\u003c/a\u003e",
+        "New acos and asin functions in mu()",
+        "New right triangle shape",
+        "Added Hebrew to the language list",
+        "Added support for Hyperion Launcher in KLWP",
+        "Fix weather Komponents ignoring nightico global",
+        "Fix manual location lookup not working on some device",
+        "Fix font icon module cutting some icon out",
+        "Fix text globals with formulas not updating when used in text",
+        "Fix auto fit width not working when text was too long and wrapping",
+        "Using https now if protocol is not provided in webget"
+      ]
+    },
+    {
+      "title": "v3.36",
+      "changes": [
+        "Fixed builtin presets showing as pro (sorry)"
+      ]
+    },
+    {
+      "title": "v3.35",
+      "changes": [
+        "A lot of new Featured stuff, missing anything? Email me!",
+        "New settings button in formula editor for smaller / monospace fonts",
+        "New ringer mode available in si()",
+        "New locked presets can be unlocked with Google sign in",
+        "New DPI and screen width / height info in si()",
+        "New read System Settings (es Screen Brightness) with si()",
+        "New KLCK now supports Gyroscope sensors",
+        "Better weather data rounding",
+        "Fix CPU info not showing on Oreo or greater (workaround)",
+        "Fix editor preview options not persistent",
+        "Fix editor sometimes showing an older state",
+        "Fix battery current not working form 3.34 on some device"
+      ]
+    },
+    {
+      "title": "v3.34",
+      "changes": [
+        "New on klwp and klck you can change preview screen ratio",
+        "New has a new option to change refresh rate (use with care)",
+        "Fix battery showing old info on visibility change",
+        "Fix update delay on touch",
+        "Fix wrong count on notification removed",
+        "Fix high CPU usage whith dead fonts",
+        "Fix beta PRO key not recognized sometimes",
+        "Fix resources not loaded in backups",
+        "Fix restore point not created automatically on save"
+      ]
+    },
+    {
+      "title": "v3.33",
+      "changes": [
+        "Hot fix for KWGT issue with fonts and music info",
+        "Fixes battery not updating in some conditions",
+        "Fixes for 1x1 widgets (you might need to add them again, sorry, launcher bug)"
+      ]
+    },
+    {
+      "title": "v3.32",
+      "changes": [
+        "Improved calendar query speed",
+        "Added support for flick launcher",
+        "Better memory usage with a lot of bitmap shapes",
+        "Reduced battery usage on some condition",
+        "Added partial Bulgarian translation (thanks!)",
+        "Fix better image detection in rss feeds",
+        "Fix weather not updating on some configuration",
+        "Fix gv returning description with list index",
+        "Fix google fonts list not filtering correctly",
+        "Fix location name not correct in some case",
+        "Fix fonts disappears after reboot or cache wipe"
+      ]
+    },
+    {
+      "title": "v3.31",
+      "changes": [
+        "Fix SVG embedded weather komponents not working"
+      ]
+    },
+    {
+      "title": "v3.30",
+      "changes": [
+        "New editor now shows internet content immediately, no need to save",
+        "New get next / prev music track via mq() on supported players",
+        "New KLCK you can disable screen wake on notifications",
+        "New added name for missed calls in uc() function",
+        "New KLWP on Android 8.1 correctly changes notifications to dark / light",
+        "New added numbers to roman numerals in tc() and text filter",
+        "New search and replace in wg() use it instead of tc(reg) whenever possible!",
+        "New dominant color and text colors in bp()",
+        "Fix maxlines not working on Oreo (it will not add dots)",
+        "Fix globals values not parsed when using lists by number",
+        "Fix progress bar not respecting min value",
+        "Fix touch links with globals not working (es rss)",
+        "Fix better music player change detection",
+        "Fix MIUI 9 not showing alarms correctly",
+        "Fix fixed notifications showing group parents on n or later",
+        "Fix fixed oreo auto fill showing on editor",
+        "Fix nova launcher shortcuts not working on MIUI",
+        "Fix timezone not detected in alternate location search"
+      ]
+    },
+    {
+      "title": "v3.29",
+      "changes": [
+        "New you can now add a description to globals",
+        "Fix partially fixed MIUI touch issue on KLWP",
+        "Fix all day events from previous day showing up",
+        "Fix owm not working on some devices",
+        "Fix global and formula switch sometimes shown when not available",
+        "Fix touch issues in editor preferences",
+        "Fix bigger touch area for number settings control",
+        "Fix editor not changing timezone properly on location change",
+        "Fix edit a global resets its value",
+        "Fix inconsistent app icons",
+        "Kustom can now order Coffee on some location"
+      ]
+    },
+    {
+      "title": "v3.28",
+      "changes": [
+        "New added underline, bgcolor and blur bb codes to text module",
+        "New added split function to tc()",
+        "New added 5 secs delay support on lucid launcher",
+        "KLWP You can disable the new rendering engine (Nougat or greater)",
+        "Fix progress bar set to volume not updating",
+        "Fix weather not updating as often as required",
+        "Fix hang when using global loops in global formulas",
+        "Fix df(w) not spelling 12am/pm correctly",
+        "Fix bbcode not working well with text filters",
+        "Fix calendar showing all day events in the wrong day on dst change",
+        "Fix occasional wrong object anchor after export",
+        "Fix li(loc) returning empty for good",
+        "Fix Kustom releasing Eichner Radiations on some devices"
+      ]
+    },
+    {
+      "title": "v3.27",
+      "changes": [
+        "New KLWP rendering much smoother on Android 7 or greater",
+        "New retrieve pkg name and version with si()",
+        "New search and replace across formulas",
+        "New KLWP support for lawnchair launcher 5 secs workaround",
+        "New added ringer and alarm volume controls",
+        "Fix text options not allowing formulas on some preference",
+        "Fix notifications images not correctly updating",
+        "Fix li(loc) sometimes returning empty values",
+        "Fix alternate location timezone ignored",
+        "Fix crash/hang when removing advanced animation entries",
+        "Fix 5 secs delay on touch after home in Android O",
+        "Fix copy/paste properties not working anymore"
+      ]
+    },
+    {
+      "title": "v3.26",
+      "changes": [
+        "WeatherUnderground/DarkSky plugin via KEY or Sub \u003ca href\u003d\"https://kustom.rocks/weather\"\u003ekustom.rocks/weather\u003c/a\u003e",
+        "New hourly forecast to wf() if available",
+        "New chance of rain and rain mm if available",
+        "New custom timezone for every layer/komponent",
+        "New tempc and maxc/minc to get the temp always in centigrades",
+        "New wi() gives provider info like forecast days and features",
+        "New map Globals to a Formulas",
+        "New OWM 14 days forecast",
+        "New replace on text selection in formula",
+        "New rss fetch images from content",
+        "Fix calendar not updating when changed in the app or externally",
+        "Fix better altitude and speed readings",
+        "Fix better detection for automatic timezone changes",
+        "Fix si(mindex) not working properly in root KLWP",
+        "Fix fixed flickering in some editor fields",
+        "Fix selectign swedish turned into swahili",
+        "Fix address now returning number street on us/uk locales",
+        "Fix force update weather not showing new result immediately",
+        "Fix yahoo pressure returning wrong values",
+        "Fix negative number not allowed in number dialogs",
+        "Fix location dialog cannot find a few citie"
+      ]
+    },
+    {
+      "title": "v3.25",
+      "changes": [
+        "New you can now see global name along with value in prefs",
+        "New df(Z) returns seconds to utc to get local time from utc",
+        "New redesigned globals and animations list, should be more snappy",
+        "Animation speed can now start from 1",
+        "Added more languages to force language option",
+        "Location will request an update less frequently when not visible",
+        "Fix editor issues with fade animations not correctly resetting",
+        "Fix hang during network ops when no network available",
+        "Fix yr.no weather provider stopped working 9th of may",
+        "Fix switch globals cannot be assigned to parent globals"
+      ]
+    },
+    {
+      "title": "v3.24",
+      "changes": [
+        "Fix huge performance issues on presets with missing files / bitmaps"
+      ]
+    },
+    {
+      "title": "v3.23",
+      "changes": [
+        "New KLWP super powah complex animation action to create custom animations",
+        "New KLWP animation ease to go back immediately on single transition (es button press blink)",
+        "New KLWP you can now move animations up and down in the list",
+        "New function fl() to do loops in kode",
+        "New you can now blur up to 200",
+        "New you can search and sort font icons",
+        "New APK Maker released \u003ca href\u003d\"http://kustom.rocks/apkmaker\"\u003ekustom.rocks/apkmaker\u003c/a\u003e",
+        "Updated font awesome icons to latest",
+        "Fix no results issues when browsing APK based presets and using Purify/Greenify",
+        "Fix list also showing packs with no assets for that filter",
+        "Fix locations settings not changing location on screen immediately",
+        "Fix sh() might hang the editor, now also error are shown",
+        "Fix KLWP deleting last animation in editor was not applying changes",
+        "Fix editor clipping third object when next clipped one was faded out",
+        "Fix KLWP gyroscope in editor is now less precise to avoid battery impact when active",
+        "Fix issues with location name or address",
+        "Fix KWGT showing in recent list after clicking custom action",
+        "Fix relative time ranges not working in fitness anymore",
+        "Fix more tuning to match google fit app counters",
+        "Fix timeout issues when no internet connections",
+        "Fix KWGT checkbox for update in bg not persistent when clicked",
+        "Fix issue that might cause unneccesary updates in background"
+      ]
+    },
+    {
+      "title": "v3.22",
+      "changes": [
+        "Fix KWGT does not require pro anymore to load from backup",
+        "New you can now switch a global or load a preset using an android shortcut",
+        "New you can now set min and max in progress module custom mode",
+        "New rotation radius now available in root elements",
+        "New KLWP now support smooth seconds rotation in root elements",
+        "New bp() has a third option that accepts a default color",
+        "New you can now use tasker var replacement also in the var name (always in the plugin)",
+        "New builtin image cropping functionality",
+        "New you can show published date for every rss article",
+        "Fix vibrating multiple times with multiple touch actions",
+        "Fix KWGT should be much faster launching simple app shortcuts",
+        "Fix multiple shortcuts not working on KLWP",
+        "Fix bp() was inverting vibrant and muted, fixed, might break stuff!",
+        "Fix spanish not shown in available languages",
+        "Fix rotated bitmaps in roots not correctly centered when not using central anchor",
+        "Fix tu() crashing app on big numbers",
+        "Fix mu() still returning fuzzy numbers in some condition",
+        "Fix edit image not working on 6.x devices and newer",
+        "Fix battery last plugged/unplugged not returning correct values",
+        "Fix globals with formulas not showing output in the editor when created",
+        "Fix dates not working when used as a formula in a global",
+        "Fix df(f) not correctly returning week of the month",
+        "Fix rss pub date will revert to first article pub date if not available"
+      ]
+    },
+    {
+      "title": "v3.21",
+      "changes": [
+        "New KLWP added support for Action Launcher 5 secs delay workaround, thanks Chris!"
+      ]
+    },
+    {
+      "title": "v3.20",
+      "changes": [
+        "New KWGT added 4x1 widget and lockscreen support on 4.4",
+        "Fix fitness showing incorrect data for active time",
+        "Fix white screen when opening on some nougat rom",
+        "Fix crash on export in some device due to webp format",
+        "Fix italian numbers to text issues"
+      ]
+    },
+    {
+      "title": "v3.19",
+      "changes": [
+        "New dark UI toggle in the drawer menu",
+        "New kustom will ask for permissions on android M or newer",
+        "New added uc() function for unread sms, calls, whatsapp and gmail, plugin required on Android 5.x or 4.4",
+        "New font picker with sort, search and super powah Google fonts download",
+        "New raw mode in wg() to dump text files without parsing",
+        "New you can direct dial numbers from kustom on Android 6.x or newer",
+        "Rewrote battery stats, charge/discharge estimations should work a bit better",
+        "New numbers to text works in Spanish too, thanks gabriel!",
+        "New you can now map text prefs to text globals",
+        "New you can now add a module in a specific position",
+        "Fix launch calendar or custom shortcuts from KLWP",
+        "Fix in vehicle data discarded in step count",
+        "Fix you can now use $ within quotes or in regexp replacements",
+        "Fix number and file randomizers will not repeat anymore",
+        "Fix null instead of cero returned in spanish n2w",
+        "Fix some player (es power amp) not showing correctly in player list",
+        "Fix si(mindex) issues in pasting modules or deeply nested groups",
+        "Fix n2w in German returning zero instead of null",
+        "Fix svg picker showing bitmap picker"
+      ]
+    },
+    {
+      "title": "v3.18",
+      "changes": [
+        "Fix day of the week series not respecting first day in the settings:",
+        "Fix some users still getting downsampled images",
+        "Fix rotation of bitmaps not working inside a group",
+        "Fix content (es map images) do not update when screen is on and location changes",
+        "Fix wg() will now check local files every minute for changes",
+        "Fix hsdpa+ showing as h only not h+",
+        "Fix json parser returning empty values with numeric results",
+        "Fix open link non working with uppercase http protocol"
+      ]
+    },
+    {
+      "title": "v3.16",
+      "changes": [
+        "New KWGT you can select preview background",
+        "New KWGT has now automatic backup and a backup tab",
+        "New external apps (es dashboards) can load a preset in the editor (see https://goo.gl/Mz6yTS)",
+        "New readonly option supported for presets too, will disable export, not editing",
+        "New added location services info to si()",
+        "New airplane mode on/off via nc(airplane)",
+        "New sh() function to run shell commands",
+        "New tc(cut) can use negative index to show last chars of a string",
+        "New added ~\u003d operator for regexp search",
+        "New compact visualization for templates komponents in load dialog",
+        "New added support for folders in sd presets/komponents",
+        "New font list is sorted by name",
+        "New added launcher pkg/name on si()",
+        "New KLWP increased max layers in root to 92",
+        "Better rounding with decimals",
+        "Fix lpad/rpad replacing spaces with pad char",
+        "Fix images blurred in some condition",
+        "Fix notification access in multi user envs",
+        "Fix address and weather not updating correctly on location change",
+        "Fix KWGT will update weather and network data as per settings even if screen stays on",
+        "Fix force weather update in editor settings not updating last updated info",
+        "Fix opacity issues in animations with combined filters",
+        "Fix album or artist not blanked when empty",
+        "Fix root not drawing bg with transparent backgrounds",
+        "Fix fetched rss entries can be up to 40",
+        "Fix tu() not refreshing one minute later"
+      ]
+    },
+    {
+      "title": "v3.15",
+      "changes": [
+        "New tu() function generates a number or picks a file in a directory every x minutes/seconds",
+        "KWGT widget resize now repects aspect ratio without overscaling",
+        "KWGT items size is homogenous across widgets if scaling is the same",
+        "New restore option now available on free version",
+        "New added drop shadow to overlapgroups (group must not be in the root in KLWP)",
+        "New android release in si()",
+        "New added a function to tc and text filters to localize numbers (so add comma to thousands in us)",
+        "New text editor highlights brackets of current function",
+        "New kode editors plugin can now show their own samples in the function list (see site for info)",
+        "New module index in its parent via si(mindex)",
+        "New toggle bt and wifi touch action",
+        "Fix clip mask not working with blur bg",
+        "Fix issues with series on dst change",
+        "Fix total mobile and total wifi traffic showing wrong data",
+        "Fix yahoo weather not working and not displaying any error",
+        "Fix math decimals rounding issue (for good)",
+        "Fix touch still working when visibility is set to remove",
+        "Fix wg() now works with local files",
+        "Fix location picker showing null for some search",
+        "Fix text editor color picker cutting result when used inside formula"
+      ]
+    },
+    {
+      "title": "v3.14",
+      "changes": [
+        "Warning! Now exporting without zip extension, old will work as usual",
+        "New vertical scrolling on supported launchers (KLWP)",
+        "New shortcuts tab in the root allows you to quickly change app touch actions",
+        "New bitmap module now has filters, blur and dim options",
+        "New colorize filter for bitmaps",
+        "New math min/max allow multiple parameters",
+        "New svg and png base weather komponents based on globals, with opacity and rotate",
+        "New option to force updates even when screen is off (KWGT), use with care!",
+        "New zodiac sign, current season and moon age/phase/illumination via ai()",
+        "New civil/astronomical/nautical sunrise and sunset via ai()",
+        "New dismiss all notifications kustom action",
+        "New ni accepts negative indexes (so ni(-1, bicon) is last notification big icon)",
+        "New day of week number in series",
+        "Preview is now interactive, you can switch globals and change shortcuts on touch",
+        "Moved globals tab a bit left",
+        "New drawer menu",
+        "Removed lag in resuming editor",
+        "Smoother animations (KLWP)",
+        "Fix import dialog now working properly and also for komponents",
+        "Fix position bar not restoring position on resume",
+        "Fix list globals keeping spaces in names",
+        "Fix tc reg replacement not working with spaces",
+        "Fix modules can have 1 char names",
+        "Fix fade in/out animations not working in the editor",
+        "Fix support for 1 screen in the editor (KLWP)",
+        "Fix equals also comparing empty spaces",
+        "Fix color picker not saving recents",
+        "Fix bitmap quality issues in shapes",
+        "Fix music progress not updating"
+      ]
+    },
+    {
+      "title": "v3.12",
+      "changes": [
+        "Editor should be much faster",
+        "New margin option in stack layer to space items",
+        "New added remove option to layer visibility",
+        "New weather info location provider id",
+        "New KWGT will update every 5 seconds when music is playing",
+        "New html to text conversion in tc()",
+        "You can now save from animations and touch events tabs",
+        "You can play multiple animations from animations list",
+        "Fix some animation parameter not accepting floats",
+        "Fix KWGT touch not working with auto size",
+        "Fix mu round sometimes not cutting to decimals correctly",
+        "Fix stack layer horizontal top not working with text",
+        "Fix connectivity not updated on screen on",
+        "Fix stuttering on music change in some preset"
+      ]
+    },
+    {
+      "title": "v3.11",
+      "changes": [
+        "WebGet now parses also Atom feeds",
+        "WebGet url mode to easy extract URLs from any web page",
+        "WebGet supports JSONPath",
+        "Nest conditions in the same if, so $if(condition, dosomething, anothercondition, dosomething, defaultvalue)$",
+        "Launch URL in Touch handles intent URIs (inc calendar events, see samples)",
+        "Force update Bitmaps and/or RSS via touch",
+        "Fitness now can have free date ranges (might break past days examples)",
+        "Fitness can now read single activity segments",
+        "Fitness data now better matches Fit official app stats",
+        "Distance in local unit to Fit (km/mi)",
+        "Access list globals by index, es gv(mylist, default, 3)",
+        "Less battery usage when using connectivity / signal / broadcasts to update",
+        "Better next Alarm detection",
+        "Right pad in tc()",
+        "Global numbers can have negative values",
+        "You can round to a specific amount of decimals with mu()",
+        "Fixed editors appending text twice",
+        "Fixed li(loc) not returning data sometimes",
+        "Fixed Yahoo weather not working anymore",
+        "Fixed Fitness steps not working together with distance",
+        "Fixed all day events finishing at 00:00 (so next day)",
+        "Fixed numbers not being recognized sometimes (no need for gv(foo) + 0 anymore)",
+        "Fixed manual number entry hangs when text is empty",
+        "Fixed numbers from Tasker not being correctly received",
+        "Fixed Shape bmp quality issues when shape and image had very different aspect ration",
+        "Fixed weather.com wind speed",
+        "Fixed http content not being downloaded when changed",
+        "Fixed wg not supporting files with file:// pattern",
+        "Speed / Stability improvements (please report new bugs!)"
+      ]
+    },
+    {
+      "title": "v3.10",
+      "changes": [
+        "KLWP Root now supports at least 64 elements",
+        "Google Fitness support via fd() function (steps, calories...)",
+        "Completely redesigned formula editor, faves support, toolbar with quick actions",
+        "New Weather Font Icon Set",
+        "New Font based Weather Komponents (Filled and Outline)",
+        "Added Vibrate Light feedback",
+        "Added Color Filter to Progress and Series modules (clear, overlay...)",
+        "Updated Material and FontAwesome sets to latest version",
+        "Performance improvements",
+        "KLWP shows modules being used in root",
+        "Better Bitmap quality in KWGT editor",
+        "Fixed slow downs in editor when using Notifications",
+        "Fixed all day events issues in calendar",
+        "Fixed progress bars not showing correct current",
+        "Fixed minutes / hours circular shape based progress",
+        "Fixed rotation not working in FontIcons",
+        "Fixed notifications by pkg not working",
+        "Fixed KWGT loosing assets when loaded from Buzz / LL",
+        "Fixed KWGT draining battery on some setup / device",
+        "KWGT new widget"
+      ]
+    },
+    {
+      "title": "v3.09",
+      "changes": [
+        "Much faster load/save especially on old presets",
+        "Added a way to get notification info by pkg, es: ni(pkgname, title)",
+        "Fixed notification icons not working with index over 1",
+        "Fixed persistent notifications including cancellable",
+        "[KWGT] Fixed touch issues when size is in auto mode"
+      ]
+    },
+    {
+      "title": "v3.08",
+      "changes": [
+        "Stats bar Notifications support via ni() function and touch actions",
+        "[KLWP] You can use formulas in animation options",
+        "[DEVS] Basic external kode editors support (see http://goo.gl/7ZSSbh)",
+        "[KWGT] Added more widget base sizes (not really needed but requested)",
+        "[KWGT] Fixed sharpness issue, locked size is not the default",
+        "Fixed bitmap picker not working with some app (es Piktures)",
+        "Fixed bitmap width limited to 720",
+        "Fixed issues in deleting events/animations",
+        "Fixed issues in recognizing pro key",
+        "Fixed fonticon issues with uppercase names",
+        "Better color detection via bp()",
+        "Better vibrate feedback on touch",
+        "Performance improvements",
+        "Added partial Czech and Indonesian (thanks guys!)",
+        "A few new widgets "
+      ]
+    },
+    {
+      "title": "v3.07",
+      "changes": [
+        "WARNING KLWP animations exported with this version are NOT compatible with 3.06",
+        "Added Korean, thanks Jong-hwan Kwon!",
+        "You can hide the \"5 secs\" delay Toast in the settings (KLWP)",
+        "Fixed globals not updating correctly (KWGT)",
+        "Fixed touch not being set on Komponents",
+        "Fixed possible disappearing images on KWGT while editing",
+        "Fixed df(W) returning empty text at the hour",
+        "Color parsing is less picky"
+      ]
+    },
+    {
+      "title": "v3.06",
+      "changes": [
+        "New FontIcon module",
+        "New Text Filter option to easily convert to upper / lower / n2w...",
+        "Setting to lock widget sizing method (for padding issues)",
+        "TextModule now has a max lines option when in fit width mode",
+        "Added Noon / Midnight to df(W)",
+        "Added 5 mins step to prgress / series",
+        "Fixed items being rotated in circular series",
+        "Fixed BlueTooth status not refreshing",
+        "Fixed Open Link touch action not working on old presets",
+        "Fixed Switch text and lists not working on old presets",
+        "Fixed (for good) Traffic Stats (old stats will still be broken)",
+        "Fixed events not showing when filtering out large Calendars",
+        "Fixed series showing 00 instead of 12 at midnight / noon",
+        "Possibly fixed calendar all day events timezone issues",
+        "Partial fix for BT showing 2 also when no device was connected"
+      ]
+    },
+    {
+      "title": "v3.05",
+      "changes": [
+        "KWGT automatically saves after first load",
+        "New fonts",
+        "Perf improvements",
+        "Fixed zero fonts being installed on KWGT",
+        "Fixed negative mobile traffic",
+        "Fixed KWGT not copying font files",
+        "Fixed fonts showing twice"
+      ]
+    },
+    {
+      "title": "v3.04",
+      "changes": [
+        "Multiple touch actions per module",
+        "KWGT will automatically scale preset to fit area on load",
+        "Added German / Italian to number to text, ordinals and clock text",
+        "Series measuring fixes (might break designs sorry)",
+        "Added Polish translation, thanks Aлексей Рукин!"
+      ]
+    },
+    {
+      "title": "v3.03",
+      "changes": [
+        "Fixed series and progress not updating correcly",
+        "Fixed series custom mode issues when returning non integers",
+        "Fixed touch not working in some configuration",
+        "Fixed scaling / font not exporting in series",
+        "Possibly fixed visibility issues of some element"
+      ]
+    },
+    {
+      "title": "v3.02",
+      "changes": [
+        "Added Series module",
+        "You can now mass move items in root",
+        "Toggle switch can toggle to a specific list entry",
+        "Presets can be imported by clicking on them from a File Manager",
+        "Smarter n2w, you can now do $tc(n2w, \"hh:mm\")$ ",
+        "Blank KWGTs will have touch to configure default ",
+        "Left padding option in tc()",
+        "New KWGTs and Komponents (thanks Irwin Kurniadi)",
+        "KWGT will go straight to editor if you have 1 widget only",
+        "Nc(bt) returns 2 if BlueTooth is connected",
+        "Added IP and Interface Name info to nc()",
+        "Progress growth can be negative",
+        "Fixed issue in music progress when duration is 0",
+        "Fixed auto off formula working the wrong way",
+        "Padding has no slider anymore but +/- like offset",
+        "Fixed first day of week default",
+        "Fixed load screen not refreshing on preset deleted / imported"
+      ]
+    },
+    {
+      "title": "v3.01",
+      "changes": [
+        "KWGT now locks its preferred screen orientation (can be changed in the settings)",
+        "KWGT more efficient widget updates (should solve the \"loading...\" issue)",
+        "Removed limits in size change (shape / scaling and so on)",
+        "Various KWGT fixes",
+        "Kustom can now drive a car"
+      ]
+    },
+    {
+      "title": "v3.00",
+      "changes": [
+        "Say welcome to \u003ca href\u003d\"https://play.google.com/store/apps/details?id\u003dorg.kustom.widget\"\u003eKustom Widget\u003c/a\u003e (KWGT)",
+        "Fixed root globals not directly used not exported",
+        "Fixed Open Weather Map issues",
+        "Fixed FX option appearing on root layer",
+        "Bought a new Bialetti Moka"
+      ]
+    },
+    {
+      "title": "v2.18",
+      "changes": [
+        "Editor auto save / restore option (pro only)",
+        "Automatic switch of globals via timer or formula",
+        "Edit list, switch and number globals after creation",
+        "Added root width / height and ratio to si()",
+        "Added Romanian, thanks Marian Cimbru!",
+        "Added \u0027w\u0027 to date parsing so you can specify day of the week",
+        "Fixed possible memory leak in editor",
+        "Fixed manual preference edit adding 0",
+        "Fixed bitmaps set to global not showing the global picker",
+        "Zero Gravity option to allow astronauts to use Kustom while in orbit"
+      ]
+    },
+    {
+      "title": "v2.11",
+      "changes": [
+        "Zooper like BB code in Text Module",
+        "Added media volume controls and status",
+        "UI improvements, better formula editor",
+        "Size is now a number pref not a slider",
+        "Fixed Debug Dump option crash",
+        "Fixes in Preset Load/Save",
+        "Kustom can now generate 1.21 gigawatts via touch action"
+      ]
+    },
+    {
+      "title": "v2.10",
+      "changes": [
+        "New load screen",
+        "Select Music Player in settings",
+        "Load presets from Tasker",
+        "Faster load / save / export",
+        "Editor notifications inside the preview",
+        "UI improvements",
+        "Fixed player being forgotten on Lollipop",
+        "Fixed (again) bitmap disappearing issues",
+        "Fixed visibility not triggered in the editor",
+        "Removed honeypot from CS30"
+      ]
+    },
+    {
+      "title": "v2.09",
+      "changes": [
+        "New Curved Text Module",
+        "New 3D Flip X/Y option in rotate preference",
+        "You can use root globals in root and reference globals within globals in the same layer",
+        "External apps can send vars directly to Kustom (see http://goo.gl/yLyQs5)",
+        "Export now available in Free version too",
+        "Better music support on Lollipop and above",
+        "Added touch action to force weather refresh",
+        "Added Chinese (China)",
+        "Fixed screen number not correctly calculated",
+        "Fixed time not updating if root location was changed",
+        "Memory optimizations in the editor",
+        "Things arent different. Things are things."
+      ]
+    },
+    {
+      "title": "v2.08",
+      "changes": [
+        "FX Option in Layers to create Long Shadows",
+        "Added Yr.No to weather providers",
+        "New bp() function to extract colors from images",
+        "You can now add Bitmap Globals",
+        "Historical traffic stats (per day, mobile, wifi and totals), need time to collect data",
+        "Lists can be switched on touch",
+        "Updated Roboto Fonts",
+        "Performance improvements",
+        "Invert, complementary, contrast and gradient mix colors in ce() function",
+        "New Ikon komponent",
+        "Fixed all day events appearing the wrong day (for good?)",
+        "Fixed progress bar not rounding values",
+        "Fixed RSS http link issues",
+        "Fixed height not being shown on Progress Module when in split mode",
+        "Fixed total memory not shown correctly when more than 2GB",
+        "Invited to a dinner with philosophers i brought two forks"
+      ]
+    },
+    {
+      "title": "v2.07",
+      "changes": [
+        "Primary location can be fixed or GPS",
+        "Three alternate locations to implement world clocks or weather",
+        "Force weather update in settings",
+        "Locked globals hidden in Komponents when locked",
+        "Generic numbers to words conversion via tc(n2w, number) English / French",
+        "Globals can be reordered (select and press up/down icons)",
+        "Calendar event location available via ci(loc, ...)",
+        "Shape clip masks can be used also in groups / komponents",
+        "Fixed calendars selection not working",
+        "Fixed rotation on circles",
+        "Fixed shapes not correctly updating on rotation seconds",
+        "Fixed calendar showing all day events on the wrong day (again)",
+        "Fixed blur not working on some image (es music covers)",
+        "Completed again ZMKATAM"
+      ]
+    },
+    {
+      "title": "v2.06",
+      "changes": [
+        "Added clip masking in Shapes (to clip animations and objects in general)",
+        "Support for Action Launcher 3 dynamic theming",
+        "Current desktop and desktop count info in si()",
+        "Battery estimated time left to charge/discharge",
+        "Battery historical data for the last 24 hours ",
+        "Fixed SVG Komponent",
+        "Unlimited number of non rounded rects and circles without gradient in root",
+        "Performance improvements when using bitmap formulas",
+        "Fixed rotate inverted not working on gyroscope animation",
+        "Water resistant up to 20,000 Leagues"
+      ]
+    },
+    {
+      "title": "v2.05",
+      "changes": [
+        "Progress Module!",
+        "Loop and Loop Reverse Animation",
+        "Added Formula Animation (0/Empty to switch off, 1 to switch on)",
+        "Text globals can now be set on touch (with the switch option)",
+        "Added SVG support in Image Module (thanks Bill) ",
+        "New Flat SVG Vector Weather Komponent",
+        "Animations can be copied",
+        "Added \"limit\" to scroll animations to stop them after a specific amount",
+        "Removed \"drizzle\" from Weather Icons (mapped to \"rain\")",
+        "si(land) returns 1 in landscape and 0 in portrait",
+        "si(locked) returns 1 if phone is locked",
+        "Fixes (atan, weather icons)",
+        "Machines take me by surprise with great frequency"
+      ]
+    },
+    {
+      "title": "v2.04",
+      "changes": [
+        "Wind speed/direction/chill, feels like temp, pressure and humidity (where available)",
+        "Math functions cos,sin,tan,atan,log,ln and rnd",
+        "Uptime, ROM name, device model and manufacturer in si()",
+        "New music touch action to launch current player",
+        "Ellipsize in tc()",
+        "Option to change weather refresh rate",
+        "You can now add Komponents in Komponents (to create reusable Weather Widgets)",
+        "Ability to GO Pro via separate APP",
+        "Fixed touch triggered on faded out objects ",
+        "Fixed fade issues when used in multiple animations",
+        "Forty Two"
+      ]
+    },
+    {
+      "title": "v2.03",
+      "changes": [
+        "New wg (Web Get) function to retrieve TXT, XML and RSS from HTTP URIs",
+        "New \"open link\" touch action",
+        "Much better single tap support (more reactive, with vibrate option, check settings)",
+        "Presets can be imported from the load screen (+ -\u0026gt; import)",
+        "Ability to select calendar to show in the settings",
+        "Option to change app language",
+        "Music action plus switch touch event",
+        "Simplified function picker",
+        "WeatherIcon Komponent has night mode switch",
+        "Fixed All Day events appearing in the wrong day",
+        "Removed double tap support, sorry there was no other way to handle single tap correctly ",
+        "Thanked the Penguin for all the Fish"
+      ]
+    },
+    {
+      "title": "v2.02",
+      "changes": [
+        "Blur controls to background and as mask to shapes in the root",
+        "Color filters and dim controls to background and shape/text bitmap textures",
+        "Mask mode to shapes and text in root folder (use with dim / color filters)",
+        "Color filter animations (es: desaturate with scroll)",
+        "Increased memory cache for templates with lots of bitmaps",
+        "Removed XCrop/YCrop as not working properly and no one really using them",
+        "New template Blur Clock",
+        "Fixed touch actions in inner items not working after animations",
+        "Found new Boson (the K Boson)"
+      ]
+    },
+    {
+      "title": "v2.01",
+      "changes": [
+        "Full UI redesign, enjoy Material Kustom!",
+        "Added visibility and unlock trigger for animations",
+        "Touch animations normal, inverted, bounce and overlook are now accelerated",
+        "You can now launch an app and switch a global with the same action",
+        "Added Scale Horizontal and Vertical",
+        "Added Animation Delay",
+        "Removed 5 secs delay on Lightning Launcher",
+        "Incremented earth radius by a tad"
+      ]
+    },
+    {
+      "title": "v1.38",
+      "changes": [
+        "X/Y offset on root elements for easier positioning (not available in groups)",
+        "Native Tasker support via br(tasker, varname)",
+        "Switch based Animations",
+        "New \"disabled\" Touch Action to filter touches",
+        "Fixed vars not appearing in the Editor",
+        "Fixed color preference copy / paste",
+        "Fixed tc(cut) not working properly",
+        "Made Giotto circle better"
+      ]
+    },
+    {
+      "title": "v1.36",
+      "changes": [
+        "You can now use bitmaps as textures in shape",
+        "Fixed touch not working in some case",
+        "Fixed bg disappearing",
+        "Fixed first calendar entry not shown",
+        "Fixed objects disappearing in rotation",
+        "Reinvented the wheel"
+      ]
+    },
+    {
+      "title": "v1.35",
+      "changes": [
+        "Hotspots support ",
+        "Ordinal suffix to tc() function",
+        "Clock to text via df(W), english only, any help for the other language accepted :)",
+        "Better (localized) generic time formatter with tf()",
+        "Added Japanese thanks WedyDQ10@androplus.org!",
+        "New cake recipe"
+      ]
+    },
+    {
+      "title": "v1.34",
+      "changes": [
+        "Calendar Function via ci()",
+        "Implemented XCrop and YCrop in OverlapGroup Tiling mode",
+        "New \"percent\" parameter to Music Info",
+        "New \"abs\" functions to Math Utils",
+        "New HEXClock template by \u003ca href\u003d\"https://plus.google.com/100790182041942879099/posts\"\u003eEric Rosch\u003c/a\u003e",
+        "Functions reference available on web too, check \u003ca href\u003d\"http://kustom.uservoice.com/knowledgebase/topics/70955-functions\"\u003eHERE\u003c/a\u003e",
+        "Incremented Awesomeness"
+      ]
+    },
+    {
+      "title": "v1.32",
+      "changes": [
+        "Gyroscope animations",
+        "Native Music Support via mi() function, thanks Chris!!!",
+        "Scale and fade inverted",
+        "Animation scroll direction can now be changed (via angle parameter)",
+        "New easy editable \"WeatherIconImage\" Komponent, see \u003ca href\u003d\"http://kustom.uservoice.com/knowledgebase/articles/472610\"\u003eHOWTO\u003c/a\u003e",
+        "New centers for scrolling (center minus 1,2,3 and center plus 1,2,3)",
+        "New template \"BunchOfText\"",
+        "Fixes",
+        "Coffee"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/divider" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <TextView android:textAppearance="@style/AppTheme.Text.Small" android:id="@id/position" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25%" />
+        <View android:background="?kustomDivider" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </FrameLayout>
+    <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:background="?colorPrimary" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/spacer">
+        <TextView android:textAppearance="@style/AppTheme.Preference.Text.Primary" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="X offset -> 25 [Straight]" />
+    </LinearLayout>
+</RelativeLayout>

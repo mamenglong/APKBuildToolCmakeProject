@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dialog_padding_start" android:paddingEnd="@dimen/dialog_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/AppTheme.Text.Small" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="monospace" android:paddingStart="8.0dip" android:paddingEnd="0.0dip" />
+        <ProgressBar android:layout_gravity="start" android:id="@id/progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="8.0dip" style="?android:progressBarStyle" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dialog_padding_start" android:paddingEnd="@dimen/dialog_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/action_search" android:layout_marginStart="4.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
+        <EditText android:textAppearance="@style/AppTheme.Dialog.Form.Entry" android:id="@id/search" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="es: London, UK" android:layout_weight="1.0" android:inputType="textVisiblePassword" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="8.0dip" style="?android:progressBarStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/action_result" android:layout_marginStart="4.0dip" />
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:id="@id/result_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Address:\nLatitude:\nLongitude:\n" android:layout_marginStart="4.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/result_tz" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Timezone" android:layout_marginStart="4.0dip" />
+            <Spinner android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:id="@id/timezone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:spinnerMode="dialog" android:layout_marginStart="-4.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

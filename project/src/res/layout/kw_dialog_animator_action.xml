@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dialog_animator_position" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:id="@id/value_position" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="0%" />
+        <com.mikepenz.iconics.view.IconicsImageView android:layout_gravity="center" android:id="@id/edit_position_minus" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="16.0dip" app:iiv_color="?android:textColorPrimary" app:iiv_icon="cmd-minus" />
+        <SeekBar android:id="@id/edit_position" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.mikepenz.iconics.view.IconicsImageView android:layout_gravity="center" android:id="@id/edit_position_plus" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="16.0dip" app:iiv_color="?android:textColorPrimary" app:iiv_icon="cmd-plus" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/dialog_animator_value_desc" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="@string/dialog_animator_property" />
+        <Spinner android:id="@id/edit_property" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="@string/dialog_animator_value" />
+        <EditText android:textAppearance="@style/AppTheme.Dialog.Form.Entry" android:id="@id/edit_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="numberDecimal|numberSigned" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <TextView android:textAppearance="@style/AppTheme.Dialog.Form.Label" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="@string/dialog_animator_ease" />
+        <Spinner android:id="@id/edit_ease" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

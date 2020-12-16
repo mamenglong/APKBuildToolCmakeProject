@@ -1,0 +1,16 @@
+# 无需更改
+add_apktool_apk(app-unsigned
+    INPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}
+)
+# 可以更换签名文件
+add_signed_apk(app
+    SRC_TARGET app-unsigned
+    KEYSTORE ${CMAKE_SOURCE_DIR}/etc/keystore
+)
+
+# 更换包名和启动类
+debug_apk(app
+    PACKAGE "org.kustom.widget"
+    ACTIVITY "org.kustom.widget.picker.WidgetPicker")
+
+install_apk(app)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="2.0dip" android:paddingTop="0.0dip" android:paddingRight="2.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kustom="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/kw_fragment_editor_preview_view" />
+    <org.kustom.lib.editor.preview.PreviewOptionsBar android:layout_gravity="top" android:orientation="horizontal" android:id="@id/preview_options" android:background="#33000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/kw_fragment_editor_preview_options" />
+    </org.kustom.lib.editor.preview.PreviewOptionsBar>
+    <org.kustom.lib.editor.preview.PreviewNavigationBar android:layout_gravity="bottom" android:id="@id/navigation" android:background="#33000000" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" kustom:horizontal="true" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_gravity="bottom" android:id="@id/snackbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

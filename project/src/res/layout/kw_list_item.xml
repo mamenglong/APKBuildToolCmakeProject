@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?kustomPrimaryLight" android:paddingLeft="@dimen/padding_large" android:paddingTop="@dimen/padding_small" android:paddingRight="@dimen/padding_large" android:paddingBottom="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="@dimen/padding_small" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/icon" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@android:drawable/btn_star" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textAppearance="@style/AppTheme.Text.Medium" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" android:singleLine="true" />
+            <TextView android:textAppearance="@style/AppTheme.Text.Small" android:ellipsize="marquee" android:id="@id/desc" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Text description whatever it might be (even if long probably)" />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton android:textColor="?colorAccent" android:gravity="center|right" android:layout_gravity="center" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/action_fix" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+    </LinearLayout>
+</FrameLayout>

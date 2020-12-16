@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/AppTheme.Toolbar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" />
+    <TextView android:textAppearance="@style/AppTheme.Text.Medium" android:gravity="center" android:id="@id/empty_text" android:padding="@dimen/padding_large" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/widget_add_first" android:textAlignment="center" />
+</LinearLayout>

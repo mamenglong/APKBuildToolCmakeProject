@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.margaritov.preference.colorpicker.ColorPickerView android:id="@id/color_picker_view" android:tag="landscape" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layerType="software" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="320.0dip" android:layout_height="fill_parent" android:layout_marginBottom="8.0dip">
+        <include layout="@layout/kw_dialog_color_picker_controls" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@android:style/TextAppearance.Small" android:layout_gravity="center" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_screen_count" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@android:style/TextAppearance.Large" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X" />
+            <NumberPicker android:layout_gravity="center" android:id="@id/x_screen_count" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="32.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@android:style/TextAppearance.Large" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y" />
+            <NumberPicker android:layout_gravity="center" android:id="@id/y_screen_count" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

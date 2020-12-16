@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="active_modules">
+        <item>TextModule</item>
+        <item>ShapeModule</item>
+        <item>BitmapModule</item>
+        <item>FontIconModule</item>
+        <item>ProgressModule</item>
+        <item>CurvedTextModule</item>
+        <item>SeriesModule</item>
+        <item>OverlapLayerModule</item>
+        <item>StackLayerModule</item>
+    </string-array>
+    <string-array name="dialog_color_picker_helper_modes">
+        <item>@string/dialog_color_mode_recent</item>
+        <item>@string/dialog_color_mode_complementary</item>
+        <item>@string/dialog_color_mode_analogous</item>
+        <item>@string/dialog_color_mode_triad</item>
+        <item>@string/dialog_color_mode_monochromatic</item>
+    </string-array>
+    <string-array name="dialog_shortcut_actions">
+        <item>@string/shortcut_action_switch_global</item>
+        <item>@string/shortcut_action_load_preset</item>
+    </string-array>
+    <string-array name="editor_export_mode_entries">
+        <item>@string/export_mode_sd</item>
+        <item>@string/export_mode_sdapk</item>
+    </string-array>
+    <string-array name="experimental_modules">
+        <item>MovieModule</item>
+    </string-array>
+    <string-array name="global_add_auto_modes">
+        <item>@string/global_add_auto_manual</item>
+        <item>@string/global_add_auto_mtimer</item>
+        <item>@string/global_add_auto_mformula</item>
+    </string-array>
+</resources>

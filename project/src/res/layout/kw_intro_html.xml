@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/kustom_intro_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="10.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@color/kustom_intro_bar" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <TextView android:textAppearance="@style/AppTheme.Text.Intro.Title" android:textColor="?android:textColorPrimary" android:layout_gravity="start|center" android:id="@id/html_title" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" />
+    </FrameLayout>
+    <WebView android:gravity="center" android:layout_gravity="center" android:id="@id/html_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:background="@color/kustom_intro_bar" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip" />
+</LinearLayout>

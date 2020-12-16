@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/kustom_card_spacing_small" card_view:cardBackgroundColor="?kustomPrimaryLight" card_view:cardCornerRadius="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:padding="1.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/AppTheme.PresetList.Card.SubTitle" android:ellipsize="marquee" android:layout_gravity="center_horizontal" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="Card Title" android:maxLines="1" android:layout_weight="1.0" android:textAlignment="center" />
+        <FrameLayout android:id="@id/preview_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/preview" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@android:drawable/btn_star" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+            <org.kustom.lib.icons.FontIconSetView android:layout_gravity="center" android:id="@id/fontset" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textAppearance="@style/AppTheme.PresetList.Card.SubTitle" android:ellipsize="marquee" android:layout_gravity="center_horizontal" android:id="@id/desc" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="Card Desc" android:maxLines="1" android:layout_weight="1.0" android:textAlignment="center" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

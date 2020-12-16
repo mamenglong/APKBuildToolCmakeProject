@@ -1,0 +1,459 @@
+.class public Lorg/kustom/lib/B;
+.super Ljava/lang/Object;
+.source "KFeatureFlags.java"
+
+
+# static fields
+.field public static final c:Lorg/kustom/lib/B;
+
+
+# instance fields
+.field private a:I
+
+.field private final b:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lorg/kustom/lib/B;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lorg/kustom/lib/B;-><init>(Z)V
+
+    sput-object v0, Lorg/kustom/lib/B;->c:Lorg/kustom/lib/B;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput v0, p0, Lorg/kustom/lib/B;->a:I
+
+    const/4 v0, 0x1
+
+    .line 3
+    iput-boolean v0, p0, Lorg/kustom/lib/B;->b:Z
+
+    return-void
+.end method
+
+.method private constructor <init>(Z)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput v0, p0, Lorg/kustom/lib/B;->a:I
+
+    .line 6
+    iput-boolean p1, p0, Lorg/kustom/lib/B;->b:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(I)Lorg/kustom/lib/B;
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lorg/kustom/lib/B;->b:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lorg/kustom/lib/B;->a:I
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lorg/kustom/lib/B;->a:I
+
+    return-object p0
+
+    .line 2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot add flags to an immutable instance"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public a()V
+    .locals 2
+
+    .line 4
+    iget-boolean v0, p0, Lorg/kustom/lib/B;->b:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lorg/kustom/lib/B;->a:I
+
+    return-void
+
+    .line 5
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Cannot clear flags of an immutable instance"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public a(Lorg/kustom/lib/B;)V
+    .locals 0
+
+    .line 3
+    invoke-virtual {p1}, Lorg/kustom/lib/B;->b()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lorg/kustom/lib/B;->a(I)Lorg/kustom/lib/B;
+
+    return-void
+.end method
+
+.method public b()I
+    .locals 1
+
+    .line 2
+    iget v0, p0, Lorg/kustom/lib/B;->a:I
+
+    return v0
+.end method
+
+.method public b(I)Z
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lorg/kustom/lib/B;->a:I
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    and-int/2addr v0, p1
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lorg/kustom/lib/B;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 1
+    instance-of v0, p1, Lorg/kustom/lib/B;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lorg/kustom/lib/B;->a:I
+
+    check-cast p1, Lorg/kustom/lib/B;
+
+    iget p1, p1, Lorg/kustom/lib/B;->a:I
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lorg/kustom/lib/B;->a:I
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v1, 0x4
+
+    .line 3
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "LOCATION "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    const/16 v1, 0x8
+
+    .line 4
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "WEATHER "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    const/16 v1, 0x10
+
+    .line 5
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "FORECAST "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    const/16 v1, 0x20
+
+    .line 6
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "GYRO "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    const/16 v1, 0x40
+
+    .line 7
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "ANALOG_CLOCK "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    const/16 v1, 0x80
+
+    .line 8
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "CALENDAR "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_6
+    const/16 v1, 0x100
+
+    .line 9
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    const-string v1, "MUSIC "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_7
+    const/16 v1, 0x200
+
+    .line 10
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "FITNESS "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_8
+    const/16 v1, 0x400
+
+    .line 11
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const-string v1, "TRAFFIC "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_9
+    const/16 v1, 0x800
+
+    .line 12
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    const-string v1, "DOWNLOAD "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_a
+    const/16 v1, 0x1000
+
+    .line 13
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    const-string v1, "SIGNAL "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_b
+    const/16 v1, 0x2000
+
+    .line 14
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    const-string v1, "NOTIFICATIONS "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_c
+    const/16 v1, 0x4000
+
+    .line 15
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_d
+
+    const-string v1, "SHELL "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_d
+    const v1, 0x8000
+
+    .line 16
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    const-string v1, "UNREAD "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_e
+    const/high16 v1, 0x10000
+
+    .line 17
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    const-string v1, "CALL "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_f
+    const/high16 v1, 0x20000
+
+    .line 18
+    invoke-virtual {p0, v1}, Lorg/kustom/lib/B;->b(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_10
+
+    const-string v1, "AIR_QUALITY "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 19
+    :cond_10
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

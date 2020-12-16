@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+
+function print_help() {
+  echo ""
+  echo "usage: android-keygen"
+  echo ""
+  echo "  -a <alias>"
+  echo "  -o <output dir>"
+  echo "  -v <validity>"
+  echo "  -s <singer>"
+  echo "  -t <type:JKS|PKCS12>"
+  echo ""
+}
+
+while getopts "a:o:v:s:t:" opt; do
+  case $opt in
+  a)
+    keygen_alias=${OPTARG}
+    ;;
+  o)
+    keygen_output=${OPTARG}
+    ;;
+  v)
+    keygen_validity=${OPTARG}
+    ;;
+  s)
+    keygen_singer=${OPTARG}
+    ;;
+  t)
+    keygen_type=$(echo "${OPTARG}" | tr '[:lower:]' '[:upper:]')
+    ;;
+  \?)
+    print_help
+    exit
+    ;;
+  esac
+done
+
+if [ "x${keygen_output}x" = "xx" ]; then
+  echo "Output not specified."
+  print_help
+  exit 1
+fi
+
+if [ "x${keygen_alias}x" = "xx" ]; then
+  echo "Alias not specified."
+  print_help
+  exit 1
+fi
+
+if [ "x${keygen_validity}x" = "xx" ]; then
+  echo "Validity not specified, default: 18250"
+  keygen_validity=18250
+fi
+
+
+if [ "x${keygen_type}x" = "xx" ]; then
+  keygen_type="PKCS12"
+fi
+
+if [ "${keygen_type}" = "PKCS12" ]; then
+  keygen_type_suffix="p12"
+elif [ "${keygen_type}" = "JKS" ]; then
+  keygen_type_suffix="jks"
+else
+  echo "Key type ${keygen_type} not supported."
+  print_help
+  exit 1
+fi
+
+if [ "x${keygen_singer}x" = "xx" ]; then
+  keygen_singer=${keygen_alias}
+fi
+
+mkdir -p "${keygen_output}"
+
+keygen_output_prefix="${keygen_output}/keystore."
+keygen_output_keystore="${keygen_output_prefix}${keygen_type_suffix}"
+keygen_output_properties="${keygen_output_prefix}properties"
+
+echo -ne "Store Password: "
+stty -echo
+read storepass
+stty echo
+echo "********"
+
+echo -ne "Alias Password: "
+stty -echo
+read keypass
+stty echo
+echo "********"
+
+if [ "${keypass}" = "" ]; then
+  keypass=${storepass}
+fi
+
+if keytool \
+  -genkey \
+  -deststoretype ${keygen_type} \
+  -destkeystore ${keygen_output_keystore} \
+  -keyalg RSA \
+  -keypass ${keypass} \
+  -storepass ${storepass} \
+  -alias ${keygen_alias} \
+  -validity ${keygen_validity}; then
+  keygen_time=$(date "+%Y-%m-%d %H:%M:%S.%s")
+  echo "# Create at: ${keygen_time}" >"${keygen_output_properties}"
+  echo "###############################################################################################" >>"${keygen_output_properties}"
+  keytool -v -list -storepass ${storepass} -keystore ${keygen_output_keystore} | awk '{{printf"# %s\n",$0}}' >>"${keygen_output_properties}"
+  echo "###############################################################################################" >>"${keygen_output_properties}"
+  echo "" >>"${keygen_output_properties}"
+  echo "key.type=${keygen_type}" >>"${keygen_output_properties}"
+  echo "key.alias=${keygen_alias}" >>"${keygen_output_properties}"
+  echo "key.store.password=pass:${storepass}" >>"${keygen_output_properties}"
+  echo "key.alias.password=pass:${keypass}" >>"${keygen_output_properties}"
+  echo "signer.name=${keygen_singer}" >>"${keygen_output_properties}"
+
+fi

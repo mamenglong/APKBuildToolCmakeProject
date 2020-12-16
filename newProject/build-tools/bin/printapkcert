@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+unzip "${1}" "META-INF/*.RSA"  -d . && keytool -printcert -file META-INF/*.RSA

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_logo" android:scaleType="fitCenter" android:alpha="0.05" />
+    <TextView android:textSize="12.0dip" android:textColor="@color/kustom_card_text_primary" android:gravity="center" android:id="@id/text" android:background="@drawable/kwgt_widget_message_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/widget_unconfigured" android:textAllCaps="true" android:fontFamily="sans-serif-light" />
+</FrameLayout>

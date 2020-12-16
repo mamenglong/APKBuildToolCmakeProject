@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+function print_help() {
+  echo ""
+  echo "usage: debugapk"
+  echo ""
+  echo "  -p <package>, required"
+  echo "  -a <activity>, required"
+  echo "  -P <port>, optional"
+  echo ""
+}
+
+function get_package_pid() {
+    adb shell ps -ef | grep $1| awk '{print $2}'
+}
+
+if [[ $# == 0 ]]; then
+    print_help
+    exit 1
+fi
+
+while getopts "p:a:P:" opt; do
+  case $opt in
+  p)
+    debugapk_package=${OPTARG}
+    ;;
+  a)
+    debugapk_activity=${OPTARG}
+    ;;
+  P)
+    debugapk_port=${OPTARG}
+    ;;
+  \?)
+    print_help
+    exit 1
+    ;;
+  esac
+done
+
+
+if [ "x${debugapk_package}x" = "xx" ]; then
+    echo "no package specified."
+    print_help
+    exit 1
+fi
+
+if [ "x${debugapk_activity}x" = "xx" ]; then
+    echo "no activity specified."
+    print_help
+    exit 1
+fi
+
+if [ "x${debugapk_port}x" = "xx" ]; then
+    debugapk_port=12345
+fi
+
+adb shell am start -D -n ${debugapk_package}/${debugapk_activity}
+
+debugapk_pid=`get_package_pid ${debugapk_package}`
+if [ "x${debugapk_pid}x" = "xx" ]; then
+    debugapk_pid=`get_package_pid ${debugapk_package}`
+fi
+
+if [ "x${debugapk_pid}x" = "xx" ]; then
+    sleep 1
+    debugapk_pid=`get_package_pid ${debugapk_package}`
+fi
+
+if [ "x${debugapk_pid}x" = "xx" ]; then
+    echo "Can't find out the debugged progress id"
+    exit 1
+fi
+
+adb forward tcp:${debugapk_port} jdwp:${debugapk_pid}
+
+echo "[DEBUG] ${debugapk_package}/${debugapk_activity}:${debugapk_pid}@${debugapk_port}"
